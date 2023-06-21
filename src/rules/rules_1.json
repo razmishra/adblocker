@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "priority": 1,
+      "action": { 
+        "type": "redirect", 
+        "redirect":{
+            "url":"https://google.com"
+        }
+    },
+      "condition": {
+        "urlFilter": "||youtube",
+        "resourceTypes": ["main_frame","sub_frame"]
+      }
+    },
+    {
+        "id": 2,
+        "priority": 1,
+        "action": { 
+          "type": "redirect", 
+          "redirect":{
+              "url":"https://google.com"
+          }
+      },
+        "condition": {
+          "urlFilter": "||facebook",
+          "resourceTypes": ["main_frame","sub_frame"]
+        }
+      }
+  ]
