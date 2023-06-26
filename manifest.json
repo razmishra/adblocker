@@ -21,8 +21,5 @@
         "declarativeNetRequestFeedback",
         "declarativeNetRequestWithHostAccess"
     ],
-    "host_permissions": [
-        "*://youtube.com/*",
-        "*://facebook.com/*"
-      ]
+    "host_permissions": ["<all_urls>"]
 }
