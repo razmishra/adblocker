@@ -5,8 +5,14 @@
     "version": "1.0",
     "description": "Adblocker",
     "background.service_worker": {
-        "service_worker": ["background.js"]
+        "service_worker": [""]
     },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["contentscript.js"]
+        }
+      ],
     "declarative_net_request": {
         "rule_resources": [
             {
@@ -19,10 +25,9 @@
     "permissions": [
         "declarativeNetRequest", 
         "declarativeNetRequestFeedback",
-        "declarativeNetRequestWithHostAccess"
+        "declarativeNetRequestWithHostAccess",
+        "tabs",
+        "scripting"
     ],
-    "host_permissions": [
-        "*://youtube.com/*",
-        "*://facebook.com/*"
-      ]
+    "host_permissions": ["<all_urls>"]
 }
